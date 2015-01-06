@@ -1,16 +1,22 @@
 #! /usr/bin/python
 def displayPathtoPrincess(n, grid):
     #Locate whether p is on the top corner
+    distance = n / 2
     if 'p' in grid[0]:
-        print 'UP\n',
+        for i in xrange(distance):
+            print 'UP\n',
         pat = grid[0]
     else: 
-        print 'DOWN\n',
+        for i in xrange(distance):
+            print 'DOWN\n',
         pat = grid[-1]
     #Locate whether p is on the left corner
     if 'p' in pat[0]:
-        print 'LEFT'
-    else: print 'RIGHT'
+        for i in xrange(distance):
+            print 'LEFT'
+    else: 
+        for i in xrange(distance):
+            print 'RIGHT'
     
     
 #print all the moves here
